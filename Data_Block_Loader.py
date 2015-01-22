@@ -44,6 +44,15 @@ def Data_Block_Loader(fname,keytext,instance=1,skip=0):
             break
         elif keytext in lines[i]:
             inst += 1
+
+    #- Ensure that all rows have the same number of points. If not, fill with nan (not a number)
+    if len(rows) > 0:
+        rows_lengths = [len(rows[i]) for i in range(len(rows))]
+        max_length = max(rows_lengths)
+    
+        for i in range(len(rows)):
+            for j in range(max_length-rows_lengths[i]):
+                rows[i].append(float('nan'))
     
     #- Transpose the data so that every tuple is a column of the data block.
     block = list(zip(*rows)) #The function list() was added to make it Python 3 compatible.

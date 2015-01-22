@@ -4,9 +4,11 @@ Results of the simulation XXX
     2.346   3.624   6.346   3.645
     8.135   7.234   5.245   1.324
     7.123   2.234   9.134   2.234
+    3.141
     
     Potentials generated with B
     and considering such and such
     6.234   3.243   6.234   2.345
     5.234   6.234   2.345   6.345
     9.123   4.134   6.134   3.123
+    2.718   9.123
